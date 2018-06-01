@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | Esqueceu a Senha</title>
+  <title>AdminLTE 2 | Lockscreen</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -26,7 +26,7 @@
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
   <div class="lockscreen-logo">
-    <a href="/views/admin/login.html"><b>Admin </b> Caike's Store</a>
+    <a href="/res/admin/index2.html"><b>Admin</b>LTE</a>
   </div>
 
   <!-- START LOCK SCREEN ITEM -->
@@ -50,11 +50,11 @@
     Digite seu e-mail e receba as instruções para redefinir a sua senha.
   </div>
   <div class="text-center">
-    <a href="/admin/login">Ou digite um novo usuário.</a>
+    <a href="/admin/login">Or sign in as a different user</a>
   </div>
   <div class="lockscreen-footer text-center">
-    <b><a href="/" class="text-black">Caike's Store</a></b><br>
-    Todos os Direitos Reservados.
+    Copyright &copy; 2014-2016 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>
+    All rights reserved
   </div>
 </div>
 <!-- /.center -->

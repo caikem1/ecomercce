@@ -5,7 +5,7 @@ namespace Hcode;
 use Rain\Tpl;
 
 class Mailer {
-
+	
 	const USERNAME = "caikemachadobatistacosta@gmail.com";
 	const PASSWORD = "caikestore123";
 	const NAME_FROM = "Caike Machado Batista Costa";
@@ -16,10 +16,10 @@ class Mailer {
 	{
 
 		$config = array(
-			"tpl_dir"		=> $_SERVER["DOCUMENT_ROOT"]."/views/email/",
-			"cache_dir"		=> $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
-			"debug"			=> false
-		);
+			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/email/",
+			"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
+			"debug"         => false
+	    );
 
 		Tpl::configure( $config );
 
@@ -43,7 +43,7 @@ class Mailer {
 		$this->mail->SMTPDebug = 0;
 
 		//Ask for HTML-friendly debug output
-		$this->mail->Host = 'smtp.gmail.com';
+		$this->mail->Debugoutput = 'html';
 
 		//Set the hostname of the mail server
 		$this->mail->Host = 'smtp.gmail.com';
@@ -53,14 +53,6 @@ class Mailer {
 
 		//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
 		$this->mail->Port = 587;
-
-		$this->mail->SMTPOptions = array(
-		    'ssl' => array(
-		        'verify_peer' => false,
-		        'verify_peer_name' => false,
-		    	'allow_self_signed' => true
-		    )
-		);
 
 		//Set the encryption system to use - ssl (deprecated) or tls
 		$this->mail->SMTPSecure = 'tls';
@@ -94,7 +86,7 @@ class Mailer {
 		$this->mail->AltBody = 'This is a plain-text message body';
 
 		//Attach an image file
-		//$this->mail->addAttachment('images/phpmailer_mini.png');
+		//$mail->addAttachment('images/phpmailer_mini.png');
 
 	}
 
@@ -102,6 +94,7 @@ class Mailer {
 	{
 
 		return $this->mail->send();
+
 	}
 
 }

@@ -205,14 +205,12 @@ class Cart extends Model {
 
 			if ($totals['vlheight'] < 2) $totals['vlheight'] = 2;
 			if ($totals['vllength'] < 16) $totals['vllength'] = 16;
-			if ($totals['vlwidth'] > 105) $totals['vlwidth'] = 105;
-			if ($totals['vlprice'] > 10000) $totals['vlprice'] = 10000;
 
 			$qs = http_build_query([
 				'nCdEmpresa'=>'',
 				'sDsSenha'=>'',
 				'nCdServico'=>'40010',
-				'sCepOrigem'=>'89035300',
+				'sCepOrigem'=>'09853120',
 				'sCepDestino'=>$nrzipcode,
 				'nVlPeso'=>$totals['vlweight'],
 				'nCdFormato'=>'1',
